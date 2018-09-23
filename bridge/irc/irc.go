@@ -134,7 +134,7 @@ func (b *Birc) Connect() error {
 	select {
 	case <-b.connected:
 		b.Log.Info("Connection succeeded")
-	case <-time.After(time.Second * 30):
+	case <-time.After(time.Second * 130):
 		return fmt.Errorf("connection timed out")
 	}
 	//i.Debug = false
